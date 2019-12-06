@@ -54,6 +54,7 @@ public class WizardSiteApplication {
 			output += "</ul>";
 			return output;
 		} else {
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No such team!");
 			return "No such team!";
 		}
 	}
